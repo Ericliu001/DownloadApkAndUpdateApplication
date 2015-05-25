@@ -1,10 +1,8 @@
 package com.ericliudeveloper.testupdateapp;
 
 import android.app.DownloadManager;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,6 +17,9 @@ import java.io.File;
 
 public class MainActivity extends ActionBarActivity {
 
+    public static final String PREFS_NAME = "MyPrefsFile";
+    public static final String APK_ABSOLUTE_PATH = "apk absolute path";
+    public static final String DOWNLOAD_ID = "download id";
     DownloadManager mDownloadManager;
     Uri uri = Uri.parse("https://docs.google.com/uc?export=download&id=0B_ApnWiMp4bVY0lwa0kxbWt5aFU");
     public static String UPDATE_APK_FILENAME = "update_apk_filename.apk";
@@ -33,19 +34,6 @@ public class MainActivity extends ActionBarActivity {
         mDownloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
-        registerReceiver(receiver, filter);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        unregisterReceiver(receiver);
-    }
 
     public void onButtonClicked(View view) {
         if (! isExternalStorageWritable()) {
@@ -73,33 +61,17 @@ public class MainActivity extends ActionBarActivity {
                         UPDATE_APK_FILENAME);
 
        downloadID =  mDownloadManager.enqueue(downloadRequest);
+
+        SharedPreferences downloadApkInfo = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = downloadApkInfo.edit();
+        editor.putString(APK_ABSOLUTE_PATH , destFile.getAbsolutePath().toString());
+        editor.putLong(DOWNLOAD_ID, downloadID);
+        // do NOT forget to commit!!!!!
+        editor.commit();
     }
 
 
-    private BroadcastReceiver receiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            long id = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
 
-            if ( id >=0 && id == downloadID  &&  DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
-                updateApplication(id);
-            }
-        }
-
-        
-    };
-
-    private void updateApplication(long id) {
-
-        Toast.makeText(MainActivity.this, "Download complete!", Toast.LENGTH_SHORT).show();
-
-
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.setDataAndType(mDownloadManager.getUriForDownloadedFile(id),
-                mDownloadManager.getMimeTypeForDownloadedFile(id));
-        startActivity(intent);
-    }
 
 
     /* Checks if external storage is available for read and write */

@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/Users/eric.liu/Library/Mobile Documents/com~apple~CloudDocs/Work/workspace/testUpdateApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="/Users/eric.liu/Library/Mobile Documents/com~apple~CloudDocs/Work/workspace/testUpdateApp/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-9da15772544564fab404ba47dacd7cf99be0be55.jar" />
-    </item>
-    <item
-        jar="/Users/eric.liu/Library/Mobile Documents/com~apple~CloudDocs/Work/workspace/testUpdateApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
+        jar="/Users/eric.liu/Developer/Projects/DownloadApkAndUpdateApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="/Users/eric.liu/Library/Mobile Documents/com~apple~CloudDocs/Work/workspace/testUpdateApp/app/build/intermediates/pre-dexed/debug/classes-af17eb63134086aa06f0b80faf5b29d3582da3ae.jar" />
-    </item>
-    <item
-        jar="/Users/eric.liu/Library/Mobile Documents/com~apple~CloudDocs/Work/workspace/testUpdateApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="/Users/eric.liu/Library/Mobile Documents/com~apple~CloudDocs/Work/workspace/testUpdateApp/app/build/intermediates/pre-dexed/debug/classes-ba902c7687f2a0526b5989d65e1b7e8497c279ab.jar" />
+        <dex dex="/Users/eric.liu/Developer/Projects/DownloadApkAndUpdateApplication/app/build/intermediates/pre-dexed/debug/classes-7834f5e7d4a695a97933cb403e7fc4a35799fedc.jar" />
     </item>
     <item
         jar="/Users/eric.liu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="/Users/eric.liu/Library/Mobile Documents/com~apple~CloudDocs/Work/workspace/testUpdateApp/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-ce4f5386262a603a9b8ff4475eef0692814b89cc.jar" />
+        <dex dex="/Users/eric.liu/Developer/Projects/DownloadApkAndUpdateApplication/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-ce4f5386262a603a9b8ff4475eef0692814b89cc.jar" />
+    </item>
+    <item
+        jar="/Users/eric.liu/Developer/Projects/DownloadApkAndUpdateApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/eric.liu/Developer/Projects/DownloadApkAndUpdateApplication/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-e11dbfdb469c486c0d61fbcddca25cbf6273114f.jar" />
+    </item>
+    <item
+        jar="/Users/eric.liu/Developer/Projects/DownloadApkAndUpdateApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/eric.liu/Developer/Projects/DownloadApkAndUpdateApplication/app/build/intermediates/pre-dexed/debug/classes-0dbceeafb3963d33bcdd5d50ace00dc0082ece51.jar" />
     </item>
 
 </items>
